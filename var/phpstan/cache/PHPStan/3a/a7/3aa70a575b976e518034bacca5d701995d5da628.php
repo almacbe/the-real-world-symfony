@@ -1,0 +1,28 @@
+<?php declare(strict_types = 1);
+
+return \PHPStan\Cache\CacheItem::__set_state(array(
+   'variableKey' => '1760628992',
+   'data' => 
+  array (
+    0 => 
+    array (
+      'filename' => '/home/alfonso/projects/test-codex/vendor/symfony/routing/Loader/Configurator/ImportConfigurator.php',
+      'modifiedTime' => 1760628992,
+    ),
+    1 => 
+    array (
+      'filename' => '/home/alfonso/projects/test-codex/vendor/symfony/routing/Loader/Configurator/Traits/HostTrait.php',
+      'modifiedTime' => 1760628992,
+    ),
+    2 => 
+    array (
+      'filename' => '/home/alfonso/projects/test-codex/vendor/symfony/routing/Loader/Configurator/Traits/PrefixTrait.php',
+      'modifiedTime' => 1760628992,
+    ),
+    3 => 
+    array (
+      'filename' => '/home/alfonso/projects/test-codex/vendor/symfony/routing/Loader/Configurator/Traits/RouteTrait.php',
+      'modifiedTime' => 1760628992,
+    ),
+  ),
+));

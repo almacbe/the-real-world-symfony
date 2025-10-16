@@ -1,0 +1,48 @@
+parameters:
+    locale: en
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Infrastructure/Persistence/Doctrine/Migrations/'
+            - '../src/Ui/Http/Kernel.php'
+
+    App\Ui\Http\Controller\:
+        resource: '../src/Ui/Http/Controller/'
+        tags: ['controller.service_arguments']
+
+    App\Ui\Console\:
+        resource: '../src/Ui/Console/'
+        tags: ['console.command']
+
+    App\Infrastructure\Persistence\Doctrine\Repository\:
+        resource: '../src/Infrastructure/Persistence/Doctrine/Repository/'
+        public: false
+        autowire: true
+        autoconfigure: true
+
+    App\Ui\Http\EventSubscriber\JsonExceptionSubscriber:
+        arguments:
+            $debug: '%kernel.debug%'
+
+    App\Domain\User\UserRepositoryInterface:
+        class: App\Infrastructure\Persistence\Doctrine\Repository\UserRepository
+
+    App\Domain\Article\ArticleRepositoryInterface:
+        class: App\Infrastructure\Persistence\Doctrine\Repository\ArticleRepository
+
+    App\Domain\Comment\CommentRepositoryInterface:
+        class: App\Infrastructure\Persistence\Doctrine\Repository\CommentRepository
+
+    App\Domain\Tag\TagRepositoryInterface:
+        class: App\Infrastructure\Persistence\Doctrine\Repository\TagRepository
+
+    Cocur\Slugify\SlugifyInterface: '@cocur_slugify'
+    cocur_slugify:
+        class: Cocur\Slugify\Slugify

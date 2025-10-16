@@ -1,0 +1,1 @@
+{"version":2,"defects":{"App\\Tests\\Functional\\ArticleApiTest::testArticleLifecycle":7,"App\\Tests\\Functional\\UserApiTest::testUserRegistrationAndLoginFlow":7},"times":{"App\\Tests\\Functional\\ArticleApiTest::testArticleLifecycle":1.712,"App\\Tests\\Functional\\UserApiTest::testUserRegistrationAndLoginFlow":0.82}}

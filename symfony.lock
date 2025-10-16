@@ -1,0 +1,50 @@
+{
+    "doctrine/doctrine-bundle": {
+        "version": "2.18.0"
+    },
+    "doctrine/doctrine-migrations-bundle": {
+        "version": "3.5.0"
+    },
+    "lexik/jwt-authentication-bundle": {
+        "version": "v3.1.1"
+    },
+    "nelmio/cors-bundle": {
+        "version": "2.5.0"
+    },
+    "symfony/console": {
+        "version": "7.3",
+        "recipe": {
+            "version": "5.3"
+        }
+    },
+    "symfony/flex": {
+        "version": "2.8",
+        "recipe": {
+            "version": "1.0"
+        }
+    },
+    "symfony/framework-bundle": {
+        "version": "v7.3.4"
+    },
+    "symfony/routing": {
+        "version": "7.3",
+        "recipe": {
+            "version": "6.2"
+        }
+    },
+    "symfony/security-bundle": {
+        "version": "v7.3.4"
+    },
+    "symfony/uid": {
+        "version": "7.3",
+        "recipe": {
+            "version": "6.2"
+        }
+    },
+    "symfony/validator": {
+        "version": "7.3",
+        "recipe": {
+            "version": "5.3"
+        }
+    }
+}
