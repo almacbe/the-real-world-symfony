@@ -62,7 +62,12 @@ The official RealWorld collection is bundled as `Conduit.postman_collection.json
 ```bash
 composer postman
 ```
-Ensure the local server is running on `http://127.0.0.1:8000` before executing the tests.
+The helper script `run-api-tests.sh` mirrors the upstream RealWorld runner. It accepts the same environment variables:
+- `APIURL` (default `http://127.0.0.1:8000/api`)
+- `USERNAME`, `EMAIL`, `PASSWORD` (randomised by default)
+- `DELAY_REQUEST` (default `50`, in milliseconds)
+Any extra arguments passed to `composer postman`/`run-api-tests.sh` are forwarded to `npx newman`.
+By default the script targets `http://127.0.0.1:8001/api`; either run the local server on that port or override `APIURL` before executing the tests.
 
 ## Switching to PostgreSQL
 1. Update `.env` (or `.env.local`) with a PostgreSQL DSN, e.g.:

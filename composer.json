@@ -72,7 +72,7 @@
         "cs": "PHP_CS_FIXER_IGNORE_ENV=1 php tools/php-cs-fixer.phar fix --diff --dry-run",
         "cs:fix": "PHP_CS_FIXER_IGNORE_ENV=1 php tools/php-cs-fixer.phar fix",
         "stan": "php tools/phpstan.phar analyse -c phpstan.neon",
-        "postman": "newman run Conduit.postman_collection.json --env-var APIURL=http://127.0.0.1:8000/api --env-var EMAIL=realworld@example.com --env-var USERNAME=realworld --env-var PASSWORD=changeme --env-var token= --env-var slug= --env-var commentId="
+        "postman": "bash run-api-tests.sh"
     },
     "conflict": {
         "symfony/symfony": "*"
