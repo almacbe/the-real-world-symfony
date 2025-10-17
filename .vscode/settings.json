@@ -1,0 +1,14 @@
+{
+  // php & análisis
+  "intelephense.environment.phpVersion": "8.2",
+  "intelephense.files.maxMemory": 8192,
+  "intelephense.diagnostics.run": "onType",
+
+  // formateo & calidad
+  "editor.formatOnSave": true,
+
+  // symfony extension
+  "symfony-vscode.projectRoot": "${workspaceFolder}",
+  "symfony-vscode.enableRoutesView": true,
+  "symfony-vscode.enableServicesView": true,
+}
