@@ -87,14 +87,16 @@ final class RealWorldResponseFactory
             $tagList[] = $tag->getName();
         }
 
+        sort($tagList);
+
         return [
             'slug' => $article->getSlug(),
             'title' => $article->getTitle(),
             'description' => $article->getDescription(),
             'body' => $article->getBody(),
             'tagList' => $tagList,
-            'createdAt' => $article->getCreatedAt()->format(\DateTimeInterface::ATOM),
-            'updatedAt' => $article->getUpdatedAt()->format(\DateTimeInterface::ATOM),
+            'createdAt' => $article->getCreatedAt()->format(\DateTimeInterface::RFC3339_EXTENDED),
+            'updatedAt' => $article->getUpdatedAt()->format(\DateTimeInterface::RFC3339_EXTENDED),
             'favorited' => $currentUser ? $article->isFavoritedBy($currentUser) : false,
             'favoritesCount' => $article->getFavoritesCount(),
             'author' => $this->profile($article->getAuthor(), $currentUser)['profile'],
@@ -108,8 +110,8 @@ final class RealWorldResponseFactory
     {
         return [
             'id' => $comment->getId(),
-            'createdAt' => $comment->getCreatedAt()->format(\DateTimeInterface::ATOM),
-            'updatedAt' => $comment->getUpdatedAt()->format(\DateTimeInterface::ATOM),
+            'createdAt' => $comment->getCreatedAt()->format(\DateTimeInterface::RFC3339_EXTENDED),
+            'updatedAt' => $comment->getUpdatedAt()->format(\DateTimeInterface::RFC3339_EXTENDED),
             'body' => $comment->getBody(),
             'author' => $this->profile($comment->getAuthor(), $currentUser)['profile'],
         ];
