@@ -5,41 +5,6 @@
     "description": "Collection for testing the Conduit API\n\nhttps://github.com/gothinkster/realworld",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "type": "text/javascript",
-        "exec": [
-          "const env = pm.environment;",
-          "const collVars = pm.collectionVariables;",
-          "const getVar = (key) => env.get(key) || collVars.get(key);",
-          "const setVar = (key, value) => {",
-          "    env.set(key, value);",
-          "    collVars.set(key, value);",
-          "};",
-          "",
-          "const baseUrl = getVar('baseUrl');",
-          "if (baseUrl) {",
-          "    const apiUrl = baseUrl.replace(/\\/$/, '') + '/api';",
-          "    setVar('APIURL', apiUrl);",
-          "}",
-          "",
-          "if (!getVar('EMAIL') || !getVar('USERNAME')) {",
-          "    const suffix = Date.now().toString();",
-          "    const email = `realworld_${suffix}@example.com`;",
-          "    const username = `realworld_${suffix}`;",
-          "    setVar('EMAIL', email);",
-          "    setVar('USERNAME', username);",
-          "}",
-          "",
-          "if (!getVar('PASSWORD')) {",
-          "    setVar('PASSWORD', 'RealWorld!123');",
-          "}"
-        ]
-      }
-    }
-  ],
   "item": [
     {
       "name": "Auth",
