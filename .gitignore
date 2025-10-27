@@ -1,2 +1,2 @@
 var/data/database.sqlite
-
+var/data/test_database.sqlite
