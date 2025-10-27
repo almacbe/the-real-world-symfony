@@ -1,3 +1,5 @@
+# **Important:** This project was created without writing any line of code manually; the entire codebase was generated through AI using Codex.
+
 # The Real Project API
 
 Symfony 7 implementation of the RealWorld backend specification (https://realworld-docs.netlify.app).
